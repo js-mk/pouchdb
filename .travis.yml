@@ -13,6 +13,7 @@ sudo:
   false
 
 addons:
+  firefox: "57.0"
   jwt:
      secure: YlCp9qGHmnnATcScIQVyOt8eI9FxLhMGAz9iRTHh7r41ADjfGJUzyqkWoBLcCagiQWtqtUujukPAtRuOibbBp9SvmGp+IIdbwHVUDvSZNOvGxkQ1qczeGxJcnht+2YNoCwfzkHW4vFrNiGOULdjvbWAB4sAJ8N0AZPShURwXU1E=
 
@@ -80,7 +81,6 @@ env:
 
   # Testing in saucelabs
   - CLIENT=saucelabs:chrome COMMAND=test
-  - FETCH=1 CLIENT=selenium:firefox COMMAND=test
   - SKIP_MIGRATION=true CLIENT=saucelabs:safari COMMAND=test
   - CLIENT="saucelabs:internet explorer:10:Windows 8" COMMAND=test
 

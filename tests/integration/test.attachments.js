@@ -2644,14 +2644,6 @@ adapters.forEach(function (adapter) {
       });
     });
 
-    it('Test synchronous getAttachment', function (done) {
-      var db = new PouchDB(dbs.name);
-      db.getAttachment('unexistent', 'attachment', function (err) {
-        should.exist(err, 'Correctly returned error');
-        done();
-      });
-    });
-
     it('Test synchronous putAttachment with text data', function (done) {
       var db = new PouchDB(dbs.name);
       var blob = testUtils.makeBlob('foobaz', 'text/plain');
